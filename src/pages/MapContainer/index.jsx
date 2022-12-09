@@ -119,7 +119,7 @@ const Map = () => {
   const [activePoint, setActivePoint] = useState();
   // 存储活动点信息的被缓存坐标
   const makerContentPosition = useMemo(
-    () => (activePoint ? activePoint.position : [108.94703, 34.25943]),
+    () => (activePoint ? activePoint.position : [119.22,36.48]),
     [activePoint]
   );
   // 当前详情popup是否显示
@@ -129,11 +129,9 @@ const Map = () => {
     <div className="home_div">
       <div className="map-title">
         <h4>
-          共收录检测点{points.length}个，检测点实时动态功能正在开发
+          共收录安丘市内检测点{points.length}个
           <br />
-          点击图标可查看检测点详情以及其他信息
-          <br />
-          其他请联系wx: cplife
+          点击图标可查看检测点详情
         </h4>
       </div>
       <Amap
