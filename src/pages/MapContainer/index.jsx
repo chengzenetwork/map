@@ -4,14 +4,6 @@ import "./index.scss";
 import axios from "axios";
 import { Popup } from "zarm";
 import { MakerPopup } from "./components/MarkerPopup";
-query getCheckPoint {
-	check_point {
-		id
-		name
-		position
-		type
-	}
-}
 const getCheckPoint = async () => {
   const res = await axios.post("https://hsmap.chengze.ltd/a", {
     query:
