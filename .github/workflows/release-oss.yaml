@@ -1,0 +1,26 @@
+name: release-oss
+on:
+  push:
+    branches:
+      - main
+jobs:
+  main:
+    name: main
+    runs-on: ubuntu-latest
+    steps:
+      - name: 切换仓库
+        uses: actions/checkout@master
+      - name: 准备Node环境
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.13.0
+      - name: 安装依赖以及编译
+        run: npm i && CI= npm run build
+      - name: FTP上传
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.ftp_server }}
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_pwd }}
+          local-dir: ./build/
+          server-dir: ./
