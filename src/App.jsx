@@ -5,7 +5,7 @@ import { config as AmapReactConfig } from "@amap/amap-react";
 import MapComponent from "./pages/MapContainer";
 
 function App() {
-  AmapReactConfig.key = "e10e14f5f4232d3f6bef02d34bb4f716";
+  AmapReactConfig.key = "cd5c721c132a6b6d579435b3b5234275";
   AmapReactConfig.plugins = ["AMap.ToolBar"];
   return (
     <div className="App">

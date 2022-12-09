@@ -119,7 +119,7 @@ const Map = () => {
   const [activePoint, setActivePoint] = useState();
   // 存储活动点信息的被缓存坐标
   const makerContentPosition = useMemo(
-    () => (activePoint ? activePoint.position : [119.22,36.48]),
+    () => (activePoint ? activePoint.position : [119.21789,36.479297]),
     [activePoint]
   );
   // 当前详情popup是否显示
